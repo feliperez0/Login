@@ -7,20 +7,20 @@ import javafx.beans.property.StringProperty;
 
 public class Model {
 
-	private StringProperty nombre = new SimpleStringProperty();
+	private StringProperty usuario = new SimpleStringProperty();
 	private StringProperty contra = new SimpleStringProperty();
 	private BooleanProperty ldap = new SimpleBooleanProperty();
 	
-	public final StringProperty nombreProperty() {
-		return this.nombre;
+	public final StringProperty usuarioProperty() {
+		return this.usuario;
 	}
 	
-	public final String getNombre() {
-		return this.nombreProperty().get();
+	public final String getUsuario() {
+		return this.usuarioProperty().get();
 	}
 	
-	public final void setNombre(final String nombre) {
-		this.nombreProperty().set(nombre);
+	public final void setUsuario(final String nombre) {
+		this.usuarioProperty().set(nombre);
 	}
 	
 	public final StringProperty contraProperty() {

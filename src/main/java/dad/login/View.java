@@ -1,17 +1,19 @@
 package dad.login;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class View extends VBox{
 
-	private TextField nombreText;
+	private TextField usuarioText;
 	private Button accederButton, cancelarButton;
 	private CheckBox ldapCheck;
 	private PasswordField contraText;
@@ -20,8 +22,8 @@ public class View extends VBox{
 		
 		super();
 		
-		nombreText = new TextField();
-		nombreText.setPromptText("Nombre de usuario");
+		usuarioText = new TextField();
+		usuarioText.setPromptText("Nombre de usuario");
 		
 		contraText = new PasswordField();
 		contraText.setPromptText("Contraseña del usuario");
@@ -31,21 +33,24 @@ public class View extends VBox{
 		accederButton = new Button("Acceder");
 		cancelarButton = new Button("Cancelar");
 		
-		HBox nombreHBox = new HBox(5, new Label("Nombre: "), nombreText);
-		
-		HBox contraHBox = new HBox(5, new Label("Contraseña: "), contraText);
-		
 		HBox botonesHBox = new HBox(5, accederButton, cancelarButton);
+		
+		GridPane root = new GridPane();
+		root.setHgap(5);
+		root.setVgap(5);
+		root.setPadding(new Insets(5));
+		root.addRow(0, new Label("Usuario: "), usuarioText);
+		root.addRow(1, new Label("Contraseña: "), contraText);
+		root.addRow(2, new Label(""), ldapCheck);
 		
 		setSpacing(5);
 		setFillWidth(false);
 		setAlignment(Pos.CENTER);
-		getChildren().addAll(nombreHBox, contraHBox, ldapCheck, botonesHBox);
-		
+		getChildren().addAll(root, botonesHBox);		
 	}
 
-	public TextField getNombreText() {
-		return nombreText;
+	public TextField getUsuarioText() {
+		return usuarioText;
 	}
 
 	public PasswordField getContraText() {
