@@ -7,16 +7,18 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
+		<exec.mainClass>/Login/src/main/java/dad/login/Main.java</exec.mainClass>
 		<maven.compiler.target>15</maven.compiler.target>
 		<maven.compiler.source>15</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<exec.mainClass>dad.login.Main</exec.mainClass>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
-			<version>15.0.1</version>
+			<version>15</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.directory.api</groupId>
@@ -29,5 +31,5 @@
 			<version>1.13</version>
 		</dependency>
 	</dependencies>
-
 </project>
+
