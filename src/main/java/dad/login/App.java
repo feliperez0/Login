@@ -11,11 +11,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        View view = new View();
         Model model = new Model();
-        Controller controller = new Controller(view, model);
+        Controller controller = new Controller(model);
 
-        Scene scene = new Scene(view, 400, 300);
+        Scene scene = new Scene(controller.getView(), 400, 300);
 
         primaryStage.setTitle("Login.fxml");
         primaryStage.setScene(scene);

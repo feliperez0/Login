@@ -20,6 +20,13 @@
 			<artifactId>javafx-controls</artifactId>
 			<version>15</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>22-ea+11</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.directory.api</groupId>
 			<artifactId>api-all</artifactId>
